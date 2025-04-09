@@ -905,3 +905,32 @@ a:focus {
   color: inherit;
 }
 /*# sourceMappingURL=style.css.map */
+
+.chat-container {
+  max-width: 600px;
+  margin: auto;
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+input, button {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+button {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+pre {
+  text-align: right;
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 10px;
+  direction: rtl;
+}
