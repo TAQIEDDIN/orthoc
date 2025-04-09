@@ -659,7 +659,33 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>
   <!-- End Google Map -->
+  
+  <div class="chat-container">
+    <h2>🤖 البوت الطبي الذكي</h2>
+    <input id="user-question" placeholder="📝 اكتب سؤالك هنا...">
+    <button onclick="sendMessage()">📩 إرسال</button>
+    <pre id="chatbot-response">🤖 الرد سيظهر هنا...</pre>
+  </div>
 
+  <script>
+    async function sendMessage() {
+      const question = document.getElementById("user-question").value;
+      const resBox = document.getElementById("chatbot-response");
+      resBox.innerText = "⏳ جارٍ المعالجة...";
+
+      const response = await fetch("https://a55a6c3ce6782dd94a.gradio.live", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ data: [question] })
+      });
+
+      const result = await response.json();
+      const data = result.data[0];
+
+      resBox.innerText = `🧠 الرد: ${data.response}\n🎯 النية: ${data.intent}\n🌐 المجال: ${data.domain}\n📊 الثقة: ${data.confidence}`;
+    }
+  </script>
+  
 </body>
 
 </html>
