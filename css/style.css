@@ -934,3 +934,36 @@ pre {
   border-radius: 10px;
   direction: rtl;
 }
+   #chat-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .message {
+      margin-bottom: 15px;
+    }
+    .user {
+      text-align: right;
+      color: #333;
+    }
+    .bot {
+      text-align: left;
+      color: #007BFF;
+    }
+    input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 15px;
+      border: none;
+      background: #ff6600;
+      color: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+    }
